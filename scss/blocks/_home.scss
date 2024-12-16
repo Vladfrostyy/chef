@@ -1,0 +1,138 @@
+.home {
+    padding: 292px 0px 248px 0px;
+
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__content {
+        max-width: 573px;
+    }
+
+    &__title {
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 0.4s linear;
+        font-weight: 600;
+        font-size: 68px;
+        line-height: 90%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 0.4s linear 0.4s;
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 0.4s linear 0.8s;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 150px;
+        padding: 12px 30px;
+        gap: 30px;
+        background-color: #f95e28;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 100%;
+        color: #fff
+    }
+
+    &__model {
+        position: fixed;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-43%);
+        z-index: -10;
+
+        &.active {
+            position: absolute;
+            top: 658px;
+            left: 188px;
+            right: 28px;  
+        }
+    }
+}
+
+.home__content.actives .home__title,
+.home__content.actives .home__text,
+.home__content.actives .home__button {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+canvas {
+    position: sticky;
+    left: 0;
+    width: 400px;
+    top: 0;
+    transform: translateX(-20%);
+    z-index: 100000000;
+}
+
+.scroll-home {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 200px;
+    bottom: -338px;
+    right: 50%;
+
+    &__text {
+        transform: rotate(-90deg);
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.05em;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 30px;
+        margin-left: -15px;
+    }
+}
+
+.orange {
+    color: #f95e28;
+}
+
+@media (max-width: 1100px) {
+    .home {
+        &__model {
+            display: none;
+        }
+
+        &__content {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 528px) {
+   .home {
+        padding: 100px 0px;
+        margin-top: 150px;
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+   } 
+   
+   .scroll-home {
+        bottom: -290px;
+   }
+}

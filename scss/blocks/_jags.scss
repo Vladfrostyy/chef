@@ -1,0 +1,148 @@
+.jags {
+    padding: 50px 0px 50px 0px;
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        justify-content: flex-end;
+        margin-left: -40px;
+    }
+
+    &__info {
+        max-width: 518px;
+        float: right;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 46px;
+        margin-bottom: 35px;
+        line-height: 100%;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 150%;
+        margin-bottom: 35px;
+    }
+
+    &__button {
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 20px;
+        padding: 23px 50px;
+        background-color: #f95e28;
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 120%;
+        text-transform: uppercase;
+    }
+}
+
+.swiper-wrapper {
+    height: 706px;
+    align-items: flex-start;
+}
+
+.swiper-pagination-bullet {
+    width: 147px;
+    height: 4px;
+    border-radius: 0;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0px 20px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+
+.swiper-button-prev {
+    background-image: url("../images/slider-prev.png") !important;
+    width: 52px;
+    height: 52px;
+
+    &::after {
+        display: none;
+    }
+}
+
+.swiper-button-next {
+    background-image: url("../images/slider-next.png") !important;
+    width: 52px;
+    height: 52px;
+
+    &::after {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .jags {
+        &__slide {
+            margin-left: 0;
+            width: 100%;
+            justify-content: center;
+        }
+
+        &__info {
+            text-align: center;
+            float: none;
+        }
+    }
+}
+
+@media (max-width: 725px) {
+    .jags {
+        &__info {
+            max-width: 400px;
+        }
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        &__button {
+            padding: 20px 30px;
+        }
+
+        &__link {
+            font-size: 16px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+    }
+
+    .swiper-wrapper {
+        height: 400px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 528px) {
+    .jags {
+        padding: 150px 0px;
+    }
+
+    .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .swiper-pagination-bullet {
+        width: 77px;
+        height: 4px;
+        margin: 0px 20px !important;
+    }
+}

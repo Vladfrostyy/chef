@@ -1,0 +1,132 @@
+.about {
+    padding: 100px 0px;
+
+    &__content {
+        display: flex;
+        background-color: #fff;
+        border-radius: 20px 0px 0px 20px;
+        justify-content: space-between;
+    }
+
+    &__info {
+        padding: 107px 40px 107px 30px;
+    }
+
+    &__text-main {
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: all 0.4s linear;
+        color: #151515;
+        font-weight: 500;
+        font-size: 31px;
+        margin-bottom: 33px;
+    }
+
+    &__text {
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: all 0.4s linear 0.8s;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(21, 21, 21, 0.8);
+        margin-bottom: 33px;
+    }
+
+    &__title {
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: all 0.4s linear 0.4s;
+        color: #151515;
+        font-weight: 400;
+        font-size: 46px;
+        line-height: 90%;
+        letter-spacing: -0.05em;
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: all 0.4s linear 1.2s;
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 100px;
+        padding: 20px 50px;
+        background-color: #f95e28;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+    }
+}
+
+.about__info.actives .about__text-main,
+.about__info.actives .about__text,
+.about__info.actives .about__title,
+.about__info.actives .about__button {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@media (max-width: 1100px) {
+    .about {
+        &__content {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px;
+            gap: 50px;
+            border-radius: 20px;
+        }
+
+        &__info {
+            padding: 0px;
+            max-width: 600px;
+        }
+
+        &__image {
+            img {
+                border-radius: 25px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 528px) {
+    .about {
+        padding: 48px 0px;
+        
+        &__content {
+            padding: 40px;
+        }
+
+        &__text-main {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        &__button {
+            padding: 15px 40px;
+        }
+
+        &__link {
+            font-size: 20px;
+        }
+    }
+}
