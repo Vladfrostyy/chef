@@ -55,12 +55,17 @@
         top: 10%;
         transform: translateX(-43%);
         z-index: -10;
+        opacity: 1;
 
         &.active {
             position: absolute;
             top: 658px;
             left: 188px;
             right: 28px;  
+        }
+
+        &.show {
+            opacity: 0;
         }
     }
 }
@@ -88,6 +93,7 @@ canvas {
     height: 200px;
     bottom: -338px;
     right: 50%;
+    animation: scrollAnimation 4s linear infinite;
 
     &__text {
         transform: rotate(-90deg);
@@ -97,6 +103,16 @@ canvas {
         color: rgba(255, 255, 255, 0.6);
         margin-bottom: 30px;
         margin-left: -15px;
+    }
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateY(0%);
+    } 50% {
+        transform: translateY(10%);
+    } 100% {
+        transform: translateY(0%);
     }
 }
 
@@ -135,4 +151,8 @@ canvas {
    .scroll-home {
         bottom: -290px;
    }
+}
+
+.home__button {
+    cursor: pointer;
 }

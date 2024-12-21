@@ -101,3 +101,34 @@ function model(set_model_directory, model_local_directory, perspectiveCamera, ca
 // Your Models, Your Settings
 
 model(air_pods_model, '../models/jar.gltf', 20, 0, 0x333333, 1, 0xffffff, 1);
+
+const sliderButtons = document.querySelectorAll(".butt");
+const modell = document.querySelector(".home__model");
+
+let isShow = true;
+
+sliderButtons.forEach((el) => {
+    el.addEventListener("click", (e) => {
+        isShow = !isShow;
+
+        if (isShow) {
+            modell.classList.remove("show");
+        } else {
+            modell.classList.add("show");
+        }
+    })
+})
+
+const button1 = document.querySelector(".home__button");
+const scrollBlock1 = document.querySelector(".about");
+
+button1.addEventListener("click", (e) => {
+    scrollBlock1.scrollIntoView({behavior: 'smooth'});
+})
+
+const button2 = document.querySelector(".about__button");
+const scrollBlock2 = document.querySelector(".jags");
+
+button2.addEventListener("click", (e) => {
+    scrollBlock2.scrollIntoView({behavior: 'smooth'});
+})

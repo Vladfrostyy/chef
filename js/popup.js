@@ -9,6 +9,7 @@ let canShow = true;
 items.forEach((el, i) => {
     el.addEventListener("click", (e) => {
         if (canShow) {
+            window.scrollTo(0, 0)
             console.log("one");
             popups[i].classList.add("active")
             body.classList.add("active")
